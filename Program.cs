@@ -26,3 +26,17 @@ string[] CreateStringArray(int length)
 }
 
 
+string[] TruncateArray(string[] array, int maxStrLength = 3, int minStrLength = 0)
+{
+    string[] truncatedArray = Array.FindAll(array, s => s.Length <= maxStrLength && s.Length > minStrLength);
+    return truncatedArray;
+}
+
+
+void PrintArray(string[] array, string message)
+{
+    Console.WriteLine($"{message}: [{string.Join(",", array)}]");
+}
+
+
+
