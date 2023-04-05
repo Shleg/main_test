@@ -39,4 +39,16 @@ void PrintArray(string[] array, string message)
 }
 
 
+void Main()
+{
+    int numStrings = InputUserData("How many strings are in the array?: ");
+    string[] myArray = CreateStringArray(numStrings);
+    Console.WriteLine();
+    PrintArray(myArray, "Original array");
+    string[] myTruncatedArray = TruncateArray(myArray);
+    Console.WriteLine();
+    PrintArray(myTruncatedArray, "Truncated array");
+}
 
+
+Main();
